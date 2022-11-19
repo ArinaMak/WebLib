@@ -84,7 +84,7 @@ _____
 
 ## Описание базы данных
 
-![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
+![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.png)
 
 ### __Таблицы:__ 
 1. Книги (содержит все книги, которые есть в общей базе)
