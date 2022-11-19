@@ -75,6 +75,12 @@ _____
 - signin.jsp - страница регистрации
 - home.css style.css - стили
 
+![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
+![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
+![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
+
+
+
 
 ## Описание базы данных
 
