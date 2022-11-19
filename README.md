@@ -75,9 +75,9 @@ _____
 - signin.jsp - страница регистрации
 - home.css style.css - стили
 
-![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
-![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
-![База данных](https://github.com/ArinaMak/WebLib/blob/main/data_base_web_lib.JPG)
+![About_jsp](https://github.com/ArinaMak/WebLib/blob/main/About_jsp.JPG)
+![home_jsp](https://github.com/ArinaMak/WebLib/blob/main/home_jsp.JPG)
+![signin_jsp](https://github.com/ArinaMak/WebLib/blob/main/signin_jsp.JPG)
 
 
 
