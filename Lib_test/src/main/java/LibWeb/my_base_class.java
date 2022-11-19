@@ -23,7 +23,9 @@ public class my_base_class {
 	
 	public void my_connect()
 	{
+		System.out.println("Connecting");
 		try {
+			
 	
     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibWeb", "root", "4444");
     st = con.createStatement();
@@ -39,14 +41,14 @@ public class my_base_class {
 	}
 	
 	
-/*	public ResultSet RS(String sql) throws SQLException
+	public ResultSet RS(String sql) throws SQLException
 	{
 		rs = st.executeQuery(sql);
 		
 		return rs;
-	}*/
-	/*
-	 //stmt.executeUpdate(sql);
+	}
+	
+	/* //stmt.executeUpdate(sql);
 	public String Update(String sql_update) throws SQLException
 	{
 		//st.executeUpdate(sql_update);

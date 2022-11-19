@@ -48,21 +48,41 @@ public class My_servlet extends HttpServlet {
 		ResultSet Book_next = null;
 	//	ResultSet Book_aut = null;
 		
-		
+			
 		
 		
 		String act = request.getParameter("act");
 		
 		if (act == null) {
 			System.out.println("act_bad");
+		}else if(act.equals("Start")) {	
+			
+			getServletContext().getRequestDispatcher("/home.jsp").forward(request, response);
+			return;
 		}else if( act.equals("Reader_BD")) {		
 				getServletContext().getRequestDispatcher("/BD_Reader.jsp").forward(request, response);
 				return;
 			
-		}else if(act.equals("Book_BD")) {		
-			System.out.println("Буук");
+		}else if(act.equals("Book_BD")) {
+			
+			
+			try {
+				Book_next = MBC.RS("SELECT  libweb.book.id_book,libweb.book.title, GROUP_CONCAT(name SEPARATOR ' , ')  as NEW \r\n"
+						+ "						FROM libweb.author_book \r\n"
+						+ "						JOIN libweb.author ON libweb.author_book.id_author = libweb.author.id_author \r\n"
+						+ "						JOIN libweb.book ON libweb.book.id_book = libweb.author_book.id_book\r\n"
+						+ "						GROUP BY title\r\n");
+				request.setAttribute("MBC", Book_next);
 				getServletContext().getRequestDispatcher("/BD_Book.jsp").forward(request, response);
-				return; 
+				return;
+			}catch (SQLException e1) {
+				System.out.println("MBC_book_bad");
+				e1.printStackTrace();
+			}
+			//
+			//System.out.println("Буук");
+				//getServletContext().getRequestDispatcher("/").forward(request, response);
+				//return; 
 
 		}else if( act.equals("Return")) {		
 			getServletContext().getRequestDispatcher("/1.jsp").forward(request, response);

@@ -1,0 +1,571 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    z-index: 1;             /***/
+    position: fixed;        /**********************/
+    background: #22242A;
+    width: calc(100% - 0%); /***/
+    height: 30px;
+    top: 0;                 /***/
+    /*padding: 20px;*/
+    padding: 20px 0 20px 0;          /*****************/
+}
+
+
+/*Раскрашивает My App в белый*/
+.header_area h3{
+    color: #fff;
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+/*Раскрашивает App в синий*/
+.header_area span{
+    color: #007877;
+}
+
+.header_area .sign_up_btn{
+    padding: 5px;
+    background: #19B3D3;
+    background: #007877;
+    text-decoration: none; /*убирает нижнее подчеркивание у ссылки*/
+    float: right;
+    width: 55px;
+    margin-top: -30px;
+    margin-right: 100px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600; /*шрифт жирный*/
+    text-align: center;
+    border: 1px solid #E0E0E0;
+    color: #fff;
+    /*небольшая задержка при перекрашивании/плавное перекрашивание*/
+    transition: 0.5s;
+    transition-property: background border color;
+}
+
+.header_area .sign_up_btn:hover{
+    background: #22242A; /*При наведении курсора на logout_btn у нее меняется цвет*/
+    border: 1px solid #22242A;
+    color: #1DC4E7;
+    color: #007877;
+}
+
+.header_area .sign_in_btn{
+    padding: 5px;
+    background: #fff;
+    text-decoration: none; /*убирает нижнее подчеркивание у ссылки*/
+    float: right;
+    width: 55px;
+    margin-top: -30px;
+    margin-right: 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600; /*шрифт жирный*/
+    text-align: center;
+    border: 1px solid #19B3D3;
+    border: 1px solid #007877;
+    color: #19B3D3;
+    color: #007877;
+    /*небольшая задержка при перекрашивании/плавное перекрашивание*/
+    transition: 0.5s;
+    transition-property: background border color;
+}
+
+.header_area .sign_in_btn:hover{
+    background: #22242A; /*При наведении курсора на logout_btn у нее меняется цвет*/
+    background: #007877;
+    border: 1px solid #22242A;
+    color: #fff;
+}
+
+.header_area .search_box{
+    /*position: absolute;********************************************/
+    position: fixed;
+    top: -37px;
+    left: 21%;
+    transform: translate(3%,97%);
+    background: none;
+    height: 30px;
+    border-radius: 30px;
+    margin: 30px 0 0 10px;
+    /*padding: 10px;*/
+}
+
+.search_btn{
+    color: #fff;
+    float: right;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    /*background: #2f3640;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    transition-property: background color;
+
+}
+.search_box:hover > .search_txt{
+    width: 250px;
+    padding: 0 6px;
+    background: #2f3640;
+    /*background: #2f3640;*/
+    height: 30px;
+    border-radius: 30px;
+    border-radius: 30px 0 0 30px;
+    /*padding: 10px;*/
+}
+.search_box:hover > .search_btn{
+    background: white;
+    margin-left: -15px;
+    color: #19B3D3;
+    color: #007877;
+    font-size: 15px;
+}
+.search_txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+    transition: 0.4s;
+}
+
+
+
+.sidebar{
+    z-index: 1; /***/
+    top: 0; /***/
+    background: #2F323A;
+    background: #007877;
+    margin-top: 70px;      /*/////////////////////Левую полосу не доводит до конца вверху*/
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 9%);    /***/
+    /*плавный сдвиг левой части*/
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;   /***/
+}
+
+.profile_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /*фотка и надпись в центре левой части*/
+}
+
+.sidebar .profile_info .profile_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px; /*кружок*/
+    margin-bottom: 10px; /*надпись под фото опускается*/
+}
+
+
+.sidebar .profile_info h4{
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+.sidebar a{
+    color: #fff;
+    color: #2F323A;
+    display: block; /*из строчки символов сделала столбец??*/
+    width: 100%;
+    line-height: 60px; /*расстояние между элементами*/
+    text-decoration: none;
+    padding-left: 40px; /*элементы отодвинулись от левого края*/
+    box-sizing: border-box; /*????????????????*/
+	border-top: 2px solid rgba(255,255,255,.1);
+	border-bottom: 2px solid black;
+
+
+    font-weight: bold;
+
+
+    transition: 0.5s;
+    transition-property: background color;
+}
+
+.sidebar a:hover{
+    padding-left: 50px;
+    /*
+    color: #19B3D3;
+    color: #2F323A;
+    */
+    color: #fff;
+
+    /*background: #fff;*/
+}
+
+.sidebar i{
+    padding-right: 10px;    /*элементы сдвигаются чуть правее иконок*/
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    /*left: 300px;*/
+    left: 20%;
+    font-size: 20px;
+    margin: 5px 0;
+    margin-top: -25px;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover{
+    color: #19B3D3;
+    color: #007877;
+}
+
+#check_sidebar:checked ~ .sidebar{
+    /*left: -190px;***/   /*левая часть сдвигается влево при нажатии кнопки, оставляя маленькую полоску*/
+    left: -185px;   /***/
+}
+
+#check_sidebar:checked ~ .sidebar a span{
+    display: none;
+}
+
+#check_sidebar:checked ~ .sidebar a{
+    font-size: 20px;
+    /*margin-left: 170px;***/
+    margin-left: 165px;     /***/
+    /*width: 80px;***/
+    width: 100%;    /***/
+
+}
+
+.content{
+    width: (100% - 250px);  /***/
+    margin-left: 249px;
+    background: url(background2.jpg) no-repeat;
+    /*background: #A8A8A8;*/
+    background: #fff;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.content2{
+    width: (100% - 250px);  /***/
+    padding: 0 20px 0 20px;  /***/
+    background: none;
+    margin-top: 60px;
+    /*overflow: hidden;*/
+    transition: 0.5s;
+    position: relative;
+    top: -250px;
+}
+
+#check_sidebar:checked ~ .content{
+    margin-left: 60px; /*при нажатии кнопки фон сдвигается влево*/
+
+}
+
+#check_sidebar:checked ~ .sidebar .profile_info{
+    display: none;
+}
+
+#check_sidebar{
+    display: none;
+}
+
+.mobile_nav{
+    display: none;
+}
+
+/****/
+.content2 .card p{
+  background: #fff;
+  padding: 15px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.content .card1 p{
+  background: #222;
+  padding: 30px;
+  /*padding: 30px 15px 30px 20px;*/
+  margin-top: -20px;
+
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: #19B3D3;
+  font-family: "Trebuchet MS", Verdana, cursive;
+  font-style: italic;
+
+  border-radius: 5px;
+
+  width: 60%;
+  opacity: 0.8;
+
+}
+
+
+.content .card_name p{
+  font-family: 'Rubik One', cursive;
+  /*font-family: "Trebuchet MS", Verdana, cursive;*/
+  font-size: 90px;
+  font-style: italic;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+
+
+  /*text-decoration: overline;*/
+  /*text-shadow: 1px 1px 1px black, 2px 2px 1px gray;*/
+
+  /*background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);*/
+
+  /*background: linear-gradient(45deg, #fff 33%, #000041 66%, #276A9D);*/
+  background: linear-gradient(45deg, #fff 20%, #19B3D3 70%, #133833);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+}
+
+
+
+.content .card_name p{
+  font-family: 'Rubik One', cursive;
+  /*font-family: "Trebuchet MS", Verdana, cursive;*/
+  font-size: 67px;
+  font-style: italic;
+  font-weight: bold;
+
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  background: linear-gradient(90deg, #1DC4E7,  #fff);
+  background: linear-gradient(90deg, #007877, #1DC4E7);   /**/
+  background: linear-gradient(90deg, #007877, #2F323A);
+  background: linear-gradient(90deg, #FF7400, #2F323A);
+  background: linear-gradient(90deg, #2F323A, #FF7400);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  display: table;
+}
+
+#content1 {
+    width: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0.6;
+    border-top: 250px solid #68B8AE;
+    border-top: 250px solid #FF7400;
+    border-right: 750px solid transparent;
+    /*overflow: hidden;*/
+}
+
+.field_popular_books{
+    width: 25%;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0.9;
+    margin: -19% 0 0 69%;
+}
+
+
+.field_popular_books a{
+    background: #FF7400;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 70px 10px 10px;
+    padding: 4% 28% 4% 4%;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    /*display: absolute;*/
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.field_popular_books a span{
+        margin-left: 10px;
+
+}
+
+.field_popular_books a:hover{
+    background: #007877;
+
+}
+
+.field_popular_books p{
+    font-family: "Trebuchet MS", Verdana, cursive;
+    font-style: italic;
+
+}
+
+
+
+
+
+
+
+
+
+
+.sidebar button{
+    width: 100%;
+    padding: 15px 50px 15px 0;
+    background: #007877;
+    color: #2F323A;
+    box-sizing: border-box; /*????????????????*/
+	border-top: 2px solid rgba(255,255,255,.1);
+	border-bottom: 2px solid black;
+	height: 60px;
+	font-weight: 900;
+}
+#sidebar_button{
+    position: absolute;
+    left: 40px;
+    margin-top: -12px;
+}
+
+.sidebar .button span{
+	padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+/*****************************************************************************************************/
+/*
+.content .card_name p span{
+  color: gray;
+  text-decoration: overline;
+}
+*/
+
+/****/
+
+
+
+
+
+/*responsive CSS*/
+
+@media screen and (max-width: 780px){
+    .sidebar{
+        display: none;
+    }
+    #sidebar_btn{
+        display:none;
+    }
+
+    .content{
+        margin-left: 0;
+        margin-top: 0;
+        padding: 10px 20px;
+        transition: 0s;
+
+    }
+
+    #check_sidebar:checked ~ .content{
+        margin-left: 0; /*убираем маленькую белую полоску слева*/
+
+    }
+
+    .mobile_nav{
+        display: block;
+        width: calc(100% - 0%);
+    }
+
+    .nav_bar{
+        background: #222;
+        width: (100% - 0px);
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /*переносит 3 черточки вправо посередине наверх????*/
+    }
+
+    .nav_bar .nav_btn{
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.5s;
+        transition-property: color;
+    }
+
+    .nav_bar .nav_btn:hover{
+        color: #19B3D3;
+    }
+
+    .mobile_nav_items{
+        background: #2F323A;
+
+        /***************/
+        display: none;
+    }
+
+    .mobile_nav_items a{
+        color: #fff;
+        display: block;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 60px;
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: 0.5s;
+        transition-property: background;
+    }
+
+    .mobile_nav_items a:hover{
+        background: #19B3D3;
+    }
+
+    .mobile_nav_items i{
+        padding-right: 10px;
+    }
+
+    /****/
+    .active{
+        display: block;
+    }
+    /****/
+
+    #content1{
+        margin-top: -60px;
+        margin-left: -20px;
+    }
+
+}
