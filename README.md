@@ -137,7 +137,7 @@ _____
 
 ![Страница About](https://github.com/ArinaMak/WebLib/blob/main/2022-12-11_20-32-19.png)
 ![Страница регистрации](https://github.com/ArinaMak/WebLib/blob/main/2022-12-11_20-32-11.png)
-![Страница всех книг](https://github.com/ArinaMak/WebLib/blob/main/2022-12-11_20-32-02.png)
+![Страница всех книг](https://github.com/ArinaMak/WebLib/blob/main/2022-12-11_21-07-26.png)
 ![Страница авторизации](https://github.com/ArinaMak/WebLib/blob/main/2022-12-11_20-31-39.png)
 
 
