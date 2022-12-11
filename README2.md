@@ -67,17 +67,17 @@ _____
 В разработке(в будущем будет переделываться, исправляться ошибки, наводиться порядок в коде). Данные файлы являются основой для дальнейшего развития кода.
 
 файл client
-1 node_modules - библиотеки
-2 public
-3 src - реализация
-3.1 API - реализация серверов
-3.1.1 book 
-BookService.js - сервер "книги"
-3.1.2 registration
-RegistrationService.js - сервер "регистрация"
-3.1.3 section
-SectionService.js - сервер "разделы" (1 вариант)
-SectionService2.js - сервер "разделы" (2 вариант)
+- node_modules - библиотеки
+- public
+- src - реализация
+    - API - реализация серверов
+        - book 
+            - BookService.js - сервер "книги"
+        - registration
+            - RegistrationService.js - сервер "регистрация"
+        - section
+            - SectionService.js - сервер "разделы" (1 вариант)
+            - SectionService2.js - сервер "разделы" (2 вариант)
 
                 
 
